@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="ZMl-zM-cib" customClass="TextFieldTableViewCell" customModule="WaterMe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZMl-zM-cib" id="ngP-Ns-655">
+                <rect key="frame" x="0.0" y="0.0" width="407" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f5H-zj-YN2">
+                        <rect key="frame" x="20" y="8" width="367" height="133.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Descccriptionnn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URK-GX-X1a">
+                                <rect key="frame" x="0.0" y="57" width="118.5" height="19.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plant Name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fgl-BH-dyl">
+                                <rect key="frame" x="126.5" y="52" width="240.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="ZMl-zM-cib" eventType="editingChanged" id="x11-Om-8lC"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Fgl-BH-dyl" firstAttribute="width" relation="greaterThanOrEqual" secondItem="f5H-zj-YN2" secondAttribute="width" multiplier="1/2" id="9jh-Q4-w9L"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="f5H-zj-YN2" secondAttribute="trailing" constant="20" symbolic="YES" id="LuL-RQ-VIO"/>
+                    <constraint firstItem="f5H-zj-YN2" firstAttribute="leading" secondItem="ngP-Ns-655" secondAttribute="leading" constant="20" symbolic="YES" id="alA-Yx-lDS"/>
+                    <constraint firstAttribute="bottom" secondItem="f5H-zj-YN2" secondAttribute="bottom" constant="8" id="hbZ-UK-FfR"/>
+                    <constraint firstItem="f5H-zj-YN2" firstAttribute="top" secondItem="ngP-Ns-655" secondAttribute="top" constant="8" id="ifd-8Z-kpT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="y9v-CY-8ng"/>
+            <connections>
+                <outlet property="bottomConstraint" destination="hbZ-UK-FfR" id="stb-iQ-QYs"/>
+                <outlet property="label" destination="URK-GX-X1a" id="pMO-fv-xRo"/>
+                <outlet property="leadingConstraint" destination="alA-Yx-lDS" id="P13-9E-MTc"/>
+                <outlet property="textField" destination="Fgl-BH-dyl" id="bwe-cR-T9y"/>
+                <outlet property="topConstraint" destination="ifd-8Z-kpT" id="YYo-Y6-Kaf"/>
+                <outlet property="trailingConstraint" destination="LuL-RQ-VIO" id="c5Y-MJ-eKF"/>
+            </connections>
+            <point key="canvasLocation" x="114.5" y="-158"/>
+        </tableViewCell>
+    </objects>
+</document>
